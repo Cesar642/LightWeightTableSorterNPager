@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<title>LightWeight Table Sorter</title>
+		<style type="text/css">
+			.sortable{font-family:Arial;font-weight: normal;font-size: 8pt;padding-top:3px;padding-left:3px;padding-bottom:3px;}
+			.sortable th.header{color:#FFFFFF;background:url(css/graphic_components/header_main.png);background-repeat:no-repeat;cursor:pointer;padding-right:15px;height: 28px;}
+			.sortable th.header.desc {background-image:url(css/graphic_components/header_asc2.png);background-position:right top;padding-right:15px;height: 28px;}
+			.sortable th.header.asc {background-image:url(css/graphic_components/header_desc2.png);background-position:right top;padding-right:15px;height: 28px;}
+			tr.trSorter.even{background-color:#F0F0F6;color:#000000}
+			tr.trSorter.odd{background-color:#FFFFFF;color:#000000}
+			.tdHeader{background-image: url(graphic_components/grid_header_component.png);background-repeat:repeat-x;height:28px;font:Arial;color:#ffffff;font-weight:bold;padding-left:5px;padding-right:5px;}
+		</style>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="lightwSortedTable.js"></script>
+		<script type="text/javascript" language="javascript">
+		    $(document).ready(function(){
+				 $('#tablesorter').lighttablesorter({
+					pageSize:5,
+					pageable:$('#pager')
+				});
+		    });
+		</script>
+	</head>
+	<body>
+		<table class='sortable'  id='tablesorter' border="1">
+			<thead>
+				<tr id='sortableHeader'>
+					<th>Column1</th>
+					<th>Column2</th>
+				</tr>
+			</thead>
+			<tbody align='right'>
+				<tr class='trSorter'>
+					<td>Value11
+					</td>
+					<td>Value12
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value21
+					</td>
+					<td>Value22
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value31
+					</td>
+					<td>Value32
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value41
+					</td>
+					<td>Value42
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value51
+					</td>
+					<td>Value52
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value61
+					</td>
+					<td>Value62
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value71
+					</td>
+					<td>Value72
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value81
+					</td>
+					<td>Value82
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value91
+					</td>
+					<td>Value92
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value101
+					</td>
+					<td>Value102
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value111
+					</td>
+					<td>Value112
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value121
+					</td>
+					<td>Value122
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value131
+					</td>
+					<td>Value132
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value141
+					</td>
+					<td>Value142
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value151
+					</td>
+					<td>Value152
+					</td>
+				</tr>
+				<tr class='trSorter'>
+					<td>Value161
+					</td>
+					<td>Value162
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+		<div class="pager" id="pager" style="left: 19px;">
+			<form>
+				<table border="0" cellspacing = "0" cellpadding="0">
+					<tr  align="center">
+						<td>
+							<img id = "first" class="first" src="css/icons/first.png"/>
+							<img id = "prev" class="prev" src="css/icons/prev.png"/>
+						</td>
+						<td style = "border:solid 1px #000000;" width = "100px">
+							<span id="pagerText" class="sortable"></span>
+						</td>
+						<td>
+							<img id = "next" class="next" src="css/icons/next.png"/>
+							<img id = "last" class="last" src="css/icons/last.png"/>
+						</td>
+						<td>
+							<select id="pagesize" class="pagesize" style="display:none">
+								<option value="5" selected="selected">5</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="24">24</option>
+								<option value="30">30</option>
+								<option value="40">40</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
